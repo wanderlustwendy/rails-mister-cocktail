@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# INGREDIENTS
+
 puts 'Cleaning database...'
 Ingredient.destroy_all
 
@@ -30,6 +32,9 @@ ingredients_attributes = [
 Ingredient.create!(ingredients_attributes)
 puts "Ingredients Created!"
 
+
+# COCKTAILS
+
 puts 'Cleaning database...'
 Cocktail.destroy_all
 
@@ -51,9 +56,17 @@ cocktails_attributes = [
  {
   name: "Agricole-Guava Cooler",
   picurl: "https://imagesvc.timeincapp.com/v3/mm/image?url=http%3A%2F%2Fcdn-image.foodandwine.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2F201008-xl-agricole-guava.jpg%3Fitok%3DHsRy_nHW&w=1600&q=70",
+  },
+ {
+  name: "Grilled Citrus and Grape Sangria",
+  picurl: "https://imagesvc.timeincapp.com/v3/mm/image?url=http%3A%2F%2Fcdn-image.foodandwine.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2F201306-xl-grilled-citrus-and-grape-sangria.jpg%3Fitok%3DBhYZ_iHj&w=1600&q=70"
+  },
+ {
+  name: "Georgia on My Mind",
+  picurl: "https://imagesvc.timeincapp.com/v3/mm/image?url=http%3A%2F%2Fcdn-image.foodandwine.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2F201307-xl-georgia-on-my-mind.jpg%3Fitok%3DYttbqIoh&w=1600&q=70"
   }
 ]
-Cocktail.create!(ingredients_attributes)
+Cocktail.create!(cocktails_attributes)
 puts "Cocktails Created!"
 
 # JSON ATTEMPT

@@ -1,12 +1,18 @@
+<div class="container">
+  <div class="row">
 
-<% Cocktail.each do %>
+    <% @cocktails.each do |c| %>
+      <%= link_to cocktail_path(c) do  %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= c.picurl %>);">
+            <div class="card-category">Popular</div>
+            <div class="card-description">
+              <h2><%= c.name %></h2>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
 
-  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-    <div class="card-category">Popular</div>
-    <div class="card-description">
-      <h2><%= Cocktail.name %></h2>
-    </div>
-    <a class="card-link" href="#" ></a>
   </div>
-
-<% end %>
+</div>
