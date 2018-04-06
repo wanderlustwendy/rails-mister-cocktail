@@ -2,11 +2,10 @@
   <div class="row">
     <div class="col col-sm-4 col-sm-offset-4">
       <%= simple_form_for (@cocktail) do |f| %>
-        <%= f.input :name, inline_label: "Enter cocktail Name" %>
+        <%= f.input :name, placeholder: f.name %>
         <%= f.button :submit, "Add a Cocktail", class: "btn btn-danger btn-sm" %>
       <% end %>
     </div>
   </div>
 </div>
-
 

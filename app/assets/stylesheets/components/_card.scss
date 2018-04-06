@@ -1,6 +1,6 @@
 .card {
   height: 180px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
   background-size: cover !important;
   background-position: center;
   position: relative;
@@ -17,6 +17,8 @@
   position: absolute;
   top: 10px;
   left: 10px;
+  font-family: oswald;
+  color: #F8F9FC;
   font-size: 15px;
   text-transform: uppercase;
 }
@@ -28,6 +30,7 @@
 .card-description h2 {
   font-size: 25px;
   font-family: oswald;
+  color: #F8F9FC;
 }
 .card-description p {
   font-size: 14px;
