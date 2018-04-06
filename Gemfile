@@ -11,7 +11,7 @@ gem 'carrierwave', '~> 1.2'
 
 gem 'mini_magick'
 gem 'fog-aws'
-
+ruby '2.4.3'
 
 # Dummy data
 gem 'faker'
