@@ -10,9 +10,8 @@ class CocktailsController < ApplicationController
     else
       @cocktails = Cocktail.all
     end
+    else
   end
-
-
 
   def show
     @cocktail = Cocktail.find(params[:id])
