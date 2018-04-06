@@ -1,6 +1,6 @@
-class CreateCocktail < ActiveRecord::Migration[5.1]
+class CreateCocktails < ActiveRecord::Migration[5.1]
   def change
-    create_table :cocktail do |t|
+    create_table :cocktails do |t|
       t.string :name
 
       t.timestamps
