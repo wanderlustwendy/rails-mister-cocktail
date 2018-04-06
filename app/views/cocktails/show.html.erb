@@ -1,17 +1,16 @@
 <div class="container">
   <div class="row">
     <div class="col col-sm-6 col-sm-offset-3">
-      <img src="<%= @cocktail.picurl %>", style="width:100%";>
-            <h1><%= @cocktail.name %></h1>
+      <img src="<%= @cocktail.photo %>", style="width:100%";>
+            <h2><%= @cocktail.name %></h2>
+            <br>
             <%= link_to "Edit", edit_cocktail_path(@cocktail), class: "btn btn-danger" %>
               <%= link_to "Go Back", cocktails_path, class: "btn btn-danger" %>
               <%= link_to "Delete", cocktail_path(@cocktail), method: :delete, data: {confirm: "Are you sure? Don't you love cocktails?"},  class: "btn btn-danger"%>
 
-              <p>
-                <%= link_to "add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
-              </p>
-
-
+                <%= link_to "add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-danger" %>
+              <br>
+              <br>
             <% @cocktail.doses.each do |dose| %>
               <p><%= dose.description %> (<%= dose.ingredient.name %>)
                 <%= link_to "delete", dose_path(dose), method: :delete%></p>

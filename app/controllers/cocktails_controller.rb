@@ -1,7 +1,18 @@
 class CocktailsController < ApplicationController
+
   def index
-    @cocktails = Cocktail.all
+    if params[:search].present?
+      sql_query = " \
+        cocktails.name ILIKE :search \
+        OR ingredients.name ILIKE :search \
+      "
+    @cocktails = Cocktail.joins(:ingredients).where(sql_query, search: "%#{params[:search]}%")
+    else
+      @cocktails = Cocktail.all
+    end
   end
+
+
 
   def show
     @cocktail = Cocktail.find(params[:id])

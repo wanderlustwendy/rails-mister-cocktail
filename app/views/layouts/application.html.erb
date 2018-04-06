@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <link href="https://fonts.googleapis.com/css?family=Chicle|Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Oswald" rel="stylesheet">
 
   </head>
 
@@ -22,13 +22,15 @@
         <%= image_tag "cocktail.png", alt: "Cocktail", width: 80 %>
       </a>
 
-      <h1>Always 5 o'clock somewhere!</h1>
+      <!-- <h1>Always 5 o'clock somewhere!</h1> -->
 
       <!-- Right Navigation -->
       <div class="navbar-wagon-right hidden-xs hidden-sm">
         <%= button_to "Add a Cocktail", new_cocktail_path,:class => "btn btn-danger btn-sm", :method => :get %>
       </div>
     </div>
+
+
 
     <%= yield %>
   </body>
