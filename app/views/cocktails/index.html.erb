@@ -4,7 +4,7 @@
     <h1>Always 5 o'clock somewhere!</h1>
     <p>You deserve a drink</p>
     <%= form_tag(cocktails_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search Cocktails" %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search by ingredients" %>
     <%= submit_tag "Search", id: "search-button", :name => nil %>
     <% end %>
   </div>
